@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+ <head>
+  <a href="DesafioHTML.html">Home</a>
+   <title>Curso JavaScript Progressivo</title>
+   Primeira nota <input id="nota1" type="number"> <br/><br>
+   Segunda  nota <input id="nota2" type="number"> <br/>
+   Terceira  nota <input id="nota3" type="number"> <br/>
+   
+   <h2> Registro de presença em <input type="number" id="percent" /> de
+    <input type="number" id="num" />  aulas dadas.
+</h2>
+   <button onclick="media()">Calcular Média</button>
+
+   <script type="text/javascript">
+
+    function media(){
+     var nota1 = parseFloat(document.getElementById("nota1").value);
+     var nota2 = parseFloat(document.getElementById("nota2").value);
+     var nota3 = parseFloat(document.getElementById("nota3").value);
+
+     var media = (nota1 + nota2 + nota3)/3 ;
+     
+     if(media >= 7)
+      if(media==10)
+       alert("Aprovado!");
+      else
+       alert("Parabens, aprovado! Media "+media);
+     else
+      alert("Reprovado!")
+
+    }
+    
+ </script>
+
+ </head>
+</html>

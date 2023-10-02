@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Calcular sua idade</title>
+</head>
+<body>
+    <a href="DesafioHTML.html">Home</a>
+    <section id="calculator">
+        <form id="form">
+            <h2 id="title">
+            Calculando sua idade:</h2>
+            <div class="form">
+                <div class="form-group col-md-6">
+                 <label for="inputname"><h7>Nome:</h7></label>
+                 <input type="text" class="form-control" name="nome" placeholder="Digite o seu Nome...">
+               </div>
+    <div class="input-box">
+        <label for="age">
+            Digite sua idade:
+        </label>
+        <div class="input-field">
+            <input type="number" id="idade"required>
+            <span></span>
+       </div>
+    </div>
+    <button id="calculate">
+        Calcular
+    </button>
+    </form>
+    <div id="infos">
+        <div id="result">
+            <div id="idade">
+                <span id="value"></span>
+                <span></span>
+        </div>
+      </div>
+</section>
+</body>
+<script>
+    const form = document.getElementById("form");
+    form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const idade = document.getElementById("idade").value;
+
+    const value = document.getElementById("value");
+    let description = "";
+    
+    value.classList.add("attention");
+
+    document.getElementById("infos").classList.remove("hidden");
+    if (idade >= 18){
+    description = "Você é maior de idade!";
+}
+else {
+    description = "Você é menor de idade!";
+    }
+
+   document.getElementById("description").textContent= description;
+});
+</script>
+</html>
